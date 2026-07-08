@@ -1,6 +1,6 @@
 cask "submind" do
-  version "1.0.1"
-  sha256 "9e3bb83be04b068b0f7d619b4dedcd4ec8ed0db987907f2a8e1ad92c4433f9c7"
+  version "1.0.2"
+  sha256 "eb913d4dbd7fdcad263c695c419a03b2a73ebd00a7a49182f3233d5863e64fe4"
 
   url "https://github.com/AspirinMrmi/SubMind/releases/download/v#{version}/SubMind-#{version}.zip"
   name "SubMind"
