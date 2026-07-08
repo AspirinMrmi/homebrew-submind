@@ -4,7 +4,7 @@ cask "submind" do
 
   url "https://github.com/AspirinMrmi/SubMind/releases/download/v#{version}/SubMind-#{version}.zip"
   name "SubMind"
-  desc "macOS subscription manager - 付费订阅管理、到期提醒、统计仪表盘"
+  desc "macOS subscription manager"
   homepage "https://github.com/AspirinMrmi/SubMind"
 
   livecheck do
@@ -15,6 +15,10 @@ cask "submind" do
   depends_on macos: :sonoma
 
   app "SubMind.app"
+
+  postflight do
+    system_command("xattr", args: ["-cr", "#{appdir}/SubMind.app"])
+  end
 
   zap trash: [
     "~/Library/Documents/SubMind",
